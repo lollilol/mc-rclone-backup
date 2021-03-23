@@ -1,12 +1,12 @@
 # mc-rclone-backup
 a simple script to backup your minecraft server using rclone and 7zip
 
-## hard dependency
-this script currently has a hard dependency on **sudo** and **systemctl**, this is to stop the minecraft server.
+## Hard dependency
+This script currently has a hard dependency on **sudo** and **systemctl**, this is to stop the minecraft server.
 Feel free to change it, depending on how you are gonna stop your minecraft server.
 
-## default settings
-the default settings assume that 
+## Default settings
+The default settings assume that 
 * rclone (in path) and 7zip (**usr/local/bin/7z**) is installed and executable.
 * that the user executing the script has "NOPASSWD" sudo rights (so you dont have to type your sudo password), atleast to use the command to stop and start the server, in my case **systemctl (start|stop) mc@funny**
 * that minecraft server(s) are stored in **/opt/minecraft/**
@@ -15,7 +15,7 @@ the default settings assume that
 * a temporary directory (for zipping the files in) exists in **$HOME/tmp/**
 
 
-### this is how the directory/file structure would look if the default settings are used:
+### This is how the directory/file structure would look if the default settings are used:
 ```
  mc:
  └── February
