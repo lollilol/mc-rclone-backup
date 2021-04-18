@@ -2,8 +2,8 @@
 
 
 SERVER_NAME=funny #can be changed using $1, i.e. executing the script "./backup servername"
-BACKUP_FILE_NAME_WORLD=$(date "+%Y.%m.%d-%H.%M")_server-$SERVER_NAME.7z
-BACKUP_FILE_NAME_SERVER=$(date "+%Y.%m.%d-%H.%M")_world-$SERVER_NAME.7z
+BACKUP_FILE_NAME_WORLD=$(date "+%Y.%m.%d-%H.%M")_world-$SERVER_NAME.7z
+BACKUP_FILE_NAME_SERVER=$(date "+%Y.%m.%d-%H.%M")_server-$SERVER_NAME.7z
 MONTH_FOLDER_NAME=$(date "+%B")
 RCLONE_UPLOAD_REMOTE=mc:/
 
