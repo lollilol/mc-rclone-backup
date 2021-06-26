@@ -1,5 +1,12 @@
 #!/bin/bash
-
+# check if there is a $1 (an argument)
+# if its empty, dont do anything
+# if its not empty, set SERVER_NAME to $1
+if [ -z "$1" ]; then
+	sleep 0
+else
+    SERVER_NAME=$1
+fi
 
 #set server by using $1, eg. "./backup servername"
 BACKUP_FILE_NAME_WORLD=$(date "+%Y.%m.%d-%H.%M")_world-$SERVER_NAME.7z
@@ -39,14 +46,6 @@ TMP_DIR=$HOME/tmp
 ## NO NECESSARY CHANGES BEYOND THIS LINE! ##
 ############################################
 
-# check if there is a $1 (an argument)
-# if its empty, dont do anything
-# if its not empty, set SERVER_NAME to $1
-if [ -z "$1" ]; then
-	sleep 0
-else
-    SERVER_NAME=$1
-fi
 #stop minecraft server
 #be sure you have set sudo to "NOPASSWD" for the user that is gonna be executing this script
 printf "" | tee $LOGFILE
