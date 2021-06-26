@@ -61,7 +61,7 @@ echo "creating archives..." | tee -a $LOGFILE
 if [ -d "$SERVER_DIR/$SERVER_NAME/world_nether" ] || [ -d "$SERVER_DIR/$SERVER_NAME/world_the_end" ]; then
 		/usr/local/bin/7z a $TMP_DIR/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD $SERVER_DIR/$SERVER_NAME/world $SERVER_DIR/$SERVER_NAME/world_nether $SERVER_DIR/$SERVER_NAME/world_the_end -mx0 |& tee -a $LOGFILE
  	else
-		/usr/local/bin/7z 7z a $TMP_DIR/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD $SERVER_DIR/$SERVER_NAME/world -mx0 |& tee -a $LOGFILE
+		/usr/local/bin/7z a $TMP_DIR/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD $SERVER_DIR/$SERVER_NAME/world -mx0 |& tee -a $LOGFILE
 fi
 
 #backup server
