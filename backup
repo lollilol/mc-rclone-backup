@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-SERVER_NAME=funny #can be changed using $1, i.e. executing the script "./backup servername"
+#set server by using $1, eg. "./backup servername"
 BACKUP_FILE_NAME_WORLD=$(date "+%Y.%m.%d-%H.%M")_world-$SERVER_NAME.7z
 BACKUP_FILE_NAME_SERVER=$(date "+%Y.%m.%d-%H.%M")_server-$SERVER_NAME.7z
 MONTH_FOLDER_NAME=$(date "+%B")
@@ -17,22 +17,22 @@ TMP_DIR=$HOME/tmp
 # mc:
 # └── February
 #     └── server
-#         ├── 2021.02.01-22.00_server-funny.7z
-#         ├── 2021.02.02-22.00_server-funny.7z
-#         ├── 2021.02.02-22.00_server-funny.7z
+#         ├── 2021.02.01-22.00_server-survival.7z
+#         ├── 2021.02.02-22.00_server-survival.7z
+#         ├── 2021.02.02-22.00_server-survival.7z
 #     └── world
-#         ├── 2021.02.01-22.00_world-funny.7z
-#         ├── 2021.02.02-22.00_world-funny.7z
-#         └── 2021.02.02-22.00_world-funny.7z
+#         ├── 2021.02.01-22.00_world-survival.7z
+#         ├── 2021.02.02-22.00_world-survival.7z
+#         └── 2021.02.02-22.00_world-survival.7z
 # └── March
 #     └── server
-#         ├── 2021.03.01-22.00_server-funny.7z
-#         ├── 2021.03.02-22.00_server-funny.7z
-#         ├── 2021.03.02-22.00_server-funny.7z
+#         ├── 2021.03.01-22.00_server-survival.7z
+#         ├── 2021.03.02-22.00_server-survival.7z
+#         ├── 2021.03.02-22.00_server-survival.7z
 #     └── world
-#         ├── 2021.03.01-22.00_world-funny.7z
-#         ├── 2021.03.02-22.00_world-funny.7z
-#         └── 2021.03.02-22.00_world-funny.7z
+#         ├── 2021.03.01-22.00_world-survival.7z
+#         ├── 2021.03.02-22.00_world-survival.7z
+#         └── 2021.03.02-22.00_world-survival.7z
 #
 
 ############################################
