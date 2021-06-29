@@ -12,7 +12,7 @@ fi
 BACKUP_FILE_NAME_WORLD=$(date "+%Y.%m.%d-%H.%M")_world-$SERVER_NAME.7z
 BACKUP_FILE_NAME_SERVER=$(date "+%Y.%m.%d-%H.%M")_server-$SERVER_NAME.7z
 MONTH_FOLDER_NAME=$(date "+%B")
-RCLONE_UPLOAD_REMOTE=mc:/
+RCLONE_UPLOAD_REMOTE=mc:/$SERVER_NAME
 
 LOGFILE=$HOME/logs/backups.log
 SERVER_DIR=/opt/minecraft
