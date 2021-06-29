@@ -16,7 +16,7 @@ RCLONE_UPLOAD_REMOTE=mc:/$SERVER_NAME
 
 LOGFILE=$HOME/logs/backups.log
 SERVER_DIR=/opt/minecraft
-TMP_DIR=$HOME/tmp
+TMP_DIR=$HOME/tmp/$SERVER_NAME
 
 
 # default settings
