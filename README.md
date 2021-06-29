@@ -8,7 +8,7 @@ Feel free to change it, depending on how you are gonna stop your minecraft serve
 ## Default settings
 The default settings assume that 
 * rclone (in path) and 7zip (**usr/local/bin/7z**) is installed and executable.
-* that the user executing the script has "NOPASSWD" sudo rights (so you dont have to type your sudo password), atleast to use the command to stop and start the server, in my case **systemctl (start|stop) mc@funny**
+* that the user executing the script has "NOPASSWD" sudo rights (so you dont have to type your sudo password), atleast to use the command to stop and start the server, in my case **systemctl (start|stop) mc@survival**
 * that minecraft server(s) are stored in **/opt/minecraft/**
 * the rclone remote is **mc:/**
 * a logfile directory exists in **$HOME/logs/**
@@ -20,20 +20,20 @@ The default settings assume that
  mc:
  └── February
      └── server
-         ├── 2021.02.01-22.00_server-funny.7z
-         ├── 2021.02.02-22.00_server-funny.7z
-         ├── 2021.02.02-22.00_server-funny.7z
+         ├── 2021.02.01-22.00_server-survival.7z
+         ├── 2021.02.02-22.00_server-survival.7z
+         ├── 2021.02.02-22.00_server-survival.7z
      └── world
-         ├── 2021.02.01-22.00_world-funny.7z
-         ├── 2021.02.02-22.00_world-funny.7z
-         └── 2021.02.02-22.00_world-funny.7z
+         ├── 2021.02.01-22.00_world-survival.7z
+         ├── 2021.02.02-22.00_world-survival.7z
+         └── 2021.02.02-22.00_world-survival.7z
  └── March
      └── server
-         ├── 2021.03.01-22.00_server-funny.7z
-         ├── 2021.03.02-22.00_server-funny.7z
-         ├── 2021.03.02-22.00_server-funny.7z
+         ├── 2021.03.01-22.00_server-survival.7z
+         ├── 2021.03.02-22.00_server-survival.7z
+         ├── 2021.03.02-22.00_server-survival.7z
      └── world
-         ├── 2021.03.01-22.00_world-funny.7z
-         ├── 2021.03.02-22.00_world-funny.7z
-         └── 2021.03.02-22.00_world-funny.7z
+         ├── 2021.03.01-22.00_world-survival.7z
+         ├── 2021.03.02-22.00_world-survival.7z
+         └── 2021.03.02-22.00_world-survival.7z
 ```
