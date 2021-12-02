@@ -1,8 +1,9 @@
 # mc-rclone-backup
-a simple script to backup your minecraft server using rclone and 7zip
+A simple script to backup your minecraft server using rclone and 7zip
+If you don't wanna execute the script as root you need to add "sudo" in front of every "systemctl" and give the user the right to execute "systemctl (without password if you wanna run it unattended)
 
 ## Hard dependency
-This script currently has a hard dependency on **sudo** and **systemctl**, this is to stop the minecraft server.
+This script currently has a hard dependency on **systemctl**, this is how i stop my minecraft servers.
 Feel free to change it, depending on how you are gonna stop your minecraft server.
 
 ## Default settings
