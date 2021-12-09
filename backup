@@ -3,8 +3,8 @@
 # if its empty, dont do anything
 # if its not empty, set SERVER_NAME to $1
 if [ -z "$1" ]; then
-	exit 1
 	echo "need servername!"
+	exit 1
 else
     SERVER_NAME=$1
 fi
