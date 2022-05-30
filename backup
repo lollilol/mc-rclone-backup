@@ -12,7 +12,8 @@ fi
 #set server by using $1, eg. "./backup servername"
 BACKUP_FILE_NAME_WORLD=$(date "+%Y.%m.%d-%H.%M")_world-$SERVER_NAME.7z
 BACKUP_FILE_NAME_SERVER=$(date "+%Y.%m.%d-%H.%M")_server-$SERVER_NAME.7z
-MONTH_FOLDER_NAME=$(date "+%m %B")
+MONTH_FOLDER_NAME=$(date "+%B")
+YEAR_FOLDER_NAME=$(date "+%Y")
 RCLONE_UPLOAD_REMOTE=mc:/$SERVER_NAME
 
 LOGFILE=$HOME/logs/backups.log
@@ -58,13 +59,15 @@ systemctl stop mc@$SERVER_NAME
 echo "creating archives..." | tee -a $LOGFILE
 #sleep 3
 if [ -d "$SERVER_DIR/$SERVER_NAME/world_nether" ] || [ -d "$SERVER_DIR/$SERVER_NAME/world_the_end" ]; then
-		/usr/local/bin/7z a $TMP_DIR/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD $SERVER_DIR/$SERVER_NAME/world $SERVER_DIR/$SERVER_NAME/world_nether $SERVER_DIR/$SERVER_NAME/world_the_end -mx0 |& tee -a $LOGFILE
+		echo "before error world spigot"
+		/usr/local/bin/7z a "$TMP_DIR/$YEAR_FOLDER_NAME/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD" "$SERVER_DIR/$SERVER_NAME/world" "$SERVER_DIR/$SERVER_NAME/world_nether" "$SERVER_DIR/$SERVER_NAME/world_the_end" -mx0 |& tee -a $LOGFILE
  	else
-		/usr/local/bin/7z a $TMP_DIR/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD $SERVER_DIR/$SERVER_NAME/world -mx0 |& tee -a $LOGFILE
+		/usr/local/bin/7z a "$TMP_DIR/$YEAR_FOLDER_NAME/$MONTH_FOLDER_NAME/world/$BACKUP_FILE_NAME_WORLD" "$SERVER_DIR/$SERVER_NAME/world" -mx0 |& tee -a $LOGFILE
 fi
 
 #backup server
-/usr/local/bin/7z a $TMP_DIR/$MONTH_FOLDER_NAME/server/$BACKUP_FILE_NAME_SERVER $SERVER_DIR/$SERVER_NAME -mx0 |& tee -a $LOGFILE
+echo "before error server"
+/usr/local/bin/7z a "$TMP_DIR/$YEAR_FOLDER_NAME/$MONTH_FOLDER_NAME/server/$BACKUP_FILE_NAME_SERVER" "$SERVER_DIR/$SERVER_NAME" -mx0 |& tee -a $LOGFILE
 
 echo ""
 echo "starting minecraft server..." | tee -a $LOGFILE
