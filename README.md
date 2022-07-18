@@ -8,7 +8,7 @@ Feel free to change it, depending on how you are gonna stop your minecraft serve
 
 ## Default settings
 The default settings assume that 
-* rclone (in path) and 7zip (**usr/local/bin/7z**) is installed and executable.
+* rclone (in path) and 7zip (**/usr/local/bin/7z**) is installed and executable.
 * that the user executing the script has "NOPASSWD" sudo rights (so you dont have to type your sudo password), atleast to use the command to stop and start the server, in my case **systemctl (start|stop) mc@survival**
 * that minecraft server(s) are stored in **/opt/minecraft/**
 * the rclone remote is **mc:/**
