@@ -23,18 +23,18 @@ The default settings assume that
      └── server
          ├── 2021.02.01-22.00_server-survival.7z
          ├── 2021.02.02-22.00_server-survival.7z
-         ├── 2021.02.02-22.00_server-survival.7z
+         ├── 2021.02.02-22.30_server-survival.7z
      └── world
          ├── 2021.02.01-22.00_world-survival.7z
          ├── 2021.02.02-22.00_world-survival.7z
-         └── 2021.02.02-22.00_world-survival.7z
+         └── 2021.02.02-22.30_world-survival.7z
  └── March
      └── server
          ├── 2021.03.01-22.00_server-survival.7z
          ├── 2021.03.02-22.00_server-survival.7z
-         ├── 2021.03.02-22.00_server-survival.7z
+         ├── 2021.03.02-22.30_server-survival.7z
      └── world
          ├── 2021.03.01-22.00_world-survival.7z
          ├── 2021.03.02-22.00_world-survival.7z
-         └── 2021.03.02-22.00_world-survival.7z
+         └── 2021.03.02-22.30_world-survival.7z
 ```
